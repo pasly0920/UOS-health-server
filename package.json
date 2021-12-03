@@ -1,0 +1,22 @@
+{
+  "name": "uos-health-server",
+  "version": "1.0.0",
+  "description": "API server for avoiding cors error",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pasly0920/UOS-health-server.git"
+  },
+  "author": "Pasly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pasly0920/UOS-health-server/issues"
+  },
+  "homepage": "https://github.com/pasly0920/UOS-health-server#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
