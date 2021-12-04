@@ -11,7 +11,7 @@ router.get('/:title', function(req, res, next) {
         url: value,
         method: 'GET'
       }, function(error, response, _body){
-        res.send(JSON.parse(_body));
+        res.send(JSON.parse(_body).body);
       });
     })
 });

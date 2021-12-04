@@ -1,5 +1,5 @@
 const request = require('request');
-
+// 원본 보관
 // const url = 'http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1';
 // let queryParams = '?' + encodeURIComponent('serviceKey') + '=' + 'N41Inf4Co88iV2GFmLqoAZCKLjIcn1uV%2Frr3EJM%2F%2BX%2Br0URo3I1cCHat9hnBmeWn0MGmGlgemYyRGNA6STk8Jg%3D%3D'; /* Service Key*/
 // queryParams += '&' + encodeURIComponent('desc_kor') + '=' + encodeURIComponent('새송이'); /* */
