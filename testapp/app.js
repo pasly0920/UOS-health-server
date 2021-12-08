@@ -3,9 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { resolveSoa } = require('dns');
 
 var app = express();
 
@@ -36,6 +38,27 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+//cors setting
+
+var whitelist = ['*'];
+
+var corsOpitons = {
+  origin: function(origin, callback){
+    var isWhitelisted = whitelist.indexOf(origin) !== -1;
+    callback(null, isWhitelisted);
+  },
+  credentials: true
+}
+
+app.use(cors(corsOpitons));
+
+app.use(function(req, res, next){
+  res.header("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  res.header("Access-Control-Allow-Methods", "GET");
+  next();
 });
 
 module.exports = app;

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/pasly0920/UOS-health-server#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "request": "^2.88.2"
   }
 }

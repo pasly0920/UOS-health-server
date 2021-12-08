@@ -6,6 +6,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/:title', function(req, res, next) {
+    res.set({'access-control-allow-origin': '*'});
     api_url(req.params.title).then((value) => {
       request({
         url: value,
